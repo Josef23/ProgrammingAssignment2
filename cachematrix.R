@@ -29,8 +29,8 @@ cacheSolve <- function(x, ...) {
       }
       data <- x$get()
       invx <- solve(data, diag(nrow(data)), ...)
-      x$setmean(invx)
-      invx 
+      x$setinv(invx)
+      invx
 }
 
 
