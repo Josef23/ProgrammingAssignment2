@@ -1,7 +1,9 @@
 ## Put comments here that give an overall description of what your
 ## functions do
 
-## Write a short comment describing this function
+## The following function is based on the makeVector() example function
+## given in the second programming assignment of the R programming
+## course on coursera.com.
 
 makeCacheMatrix <- function(x = matrix()) {
 	invx <- NULL
@@ -18,7 +20,9 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## The following function is based on the cachemean() example function
+## given in the second programming assignment of the R programming
+## course on coursera.com.
 
 cacheSolve <- function(x, ...) {
       ## Return a matrix that is the inverse of 'x'
@@ -28,6 +32,11 @@ cacheSolve <- function(x, ...) {
       	return(invx)
       }
       data <- x$get()
+	## The following line is the main diference of this function and
+	## the example. It solves the system represented by a square matrix
+	## and a singular matrix of same dimentions. Note that the singular
+	## matrix is given explicitly to the slove() function because I
+	## am not yet 100% sure how R behaves with the '...' arguments.
       invx <- solve(data, diag(nrow(data)), ...)
       x$setinv(invx)
       invx
