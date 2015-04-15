@@ -1,7 +1,10 @@
-## Put comments here that give an overall description of what your
-## functions do
+## The first function creates a list of four functions the serve as
+## as setters and getters of a matrix and its inverse.
+## The second function checks if there is an inverse of the matrix 
+## cached from a previous time. If there is it returns it. If there is
+## not then it calculates it and returns it.
 
-## The following function is based on the makeVector() example function
+## The makeCacheMatrix() function is based on the makeVector() example function
 ## given in the second programming assignment of the R programming
 ## course on coursera.com.
 
@@ -20,7 +23,7 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## The following function is based on the cachemean() example function
+## The cacheSolve() function is based on the cachemean() example function
 ## given in the second programming assignment of the R programming
 ## course on coursera.com.
 
